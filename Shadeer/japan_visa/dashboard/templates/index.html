@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .chart {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <h2>Statistics</h2>
+    <p>Number of unique Cardholders: {{ num_unique_cardholders }}</p>
+    <p>Number of unique Cards: {{ num_unique_cards }}</p>
+
+    <div class="chart">
+        <h2>Cardholder Distribution by Card Count</h2>
+        <img src="data:image/png;base64,{{ pie_chart_data }}" alt="Pie Chart">
+    </div>
+
+    <div class="chart">
+        <h2>Top Issuers by Card ID Count</h2>
+        <img src="data:image/png;base64,{{ bar_plot_data }}" alt="Bar Plot">
+    </div>
+</body>
+</html>
